@@ -126,8 +126,7 @@ class MessageHandler:
         # Create buckets if not existing
         for key, bucket in self._buckets.items():
             logger.debug("Creating bucket: {}".format(bucket['id']))
-            self._client.create_bucket(bucket['id'], bucket['event_type'],
-                                       queued=True)
+            self._client.create_bucket(bucket['id'], bucket['event_type'])
 
     def update_event_queue(self):
         self._event_queue.update()
