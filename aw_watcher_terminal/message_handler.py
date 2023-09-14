@@ -113,12 +113,12 @@ class MessageHandler:
         self._buckets = {
             'commands': {
                 'id': "{}-commands_{}".format(client_id,
-                                              self._client.hostname),
+                                              self._client.client_hostname),
                 'event_type': 'app.terminal.command'
             },
             'activity': {
                 'id': "{}-activity_{}".format(client_id,
-                                              self._client.hostname),
+                                              self._client.client_hostname),
                 'event_type': 'app.terminal.activity'
             }
         }
